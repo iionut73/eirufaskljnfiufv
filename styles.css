@@ -12,8 +12,8 @@ h1 {
     text-align: center;
 }
 body {
-    background-color: #f0f0f0;
-    font-family: Lucida Handwriting, cursive;
+    background-color:aliceblue
+    font-family: Arial, sans-serif;
 }
 p {
     font-size: 1.5rem;
@@ -29,6 +29,10 @@ hr {
 }
 input{
     accent-color: pink;
+}
+label {
+    font-size: 0.9rem;
+    margin: 10px 0;
 }
 .description2 {
     color: #ffb9e6;
