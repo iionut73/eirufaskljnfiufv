@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Countdown</h1>
+    <h3 class="description">Till we meet:</h3>
+    <p id="time"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 16, 2025 15:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="time"
+  document.getElementById("time").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("time").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<h3 class="description">Time since we started talking:</h3>
+<p id="since"></p>
+<script>
+var sinceDate = new Date("Jul 23, 2025 23:45:00").getTime();
+
+setInterval(function() {
+    var now = new Date().getTime();
+    var distance = now - sinceDate;
+
+    if (distance < 0) {
+        document.getElementById("since").innerHTML = "Not started yet";
+        return;
+    }
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("since").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+}, 1000);
+</script>
+<hr>
+<h2 class="description2">Tasks to complete</h2>
+<h5 class="description3">(Dont rush shit)</h4>
+<h5 class="description3">(Not in order)</h4>
+<input type="checkbox" id="task0" name="task" value="task0">
+<label for="task0">Facetime together</label><br>
+<input type="checkbox" id="task1" name="task" value="task1">
+<label for="task1">Make a joint playlist</label><br>
+<input type="checkbox" id="task2" name="task" value="task2">
+<label for="task2">Make a minecraft house together</label><br>
+<input type="checkbox" id="task3" name="task" value="task3">
+<label for="task3">Make a shared note</label>
+<br>
+<input type="checkbox" id="task4" name="task" value="task4">
+<label for="task4">Send each other one photo a day for a week</label><br>
+
+<input type="checkbox" id="task5" name="task" value="task5">
+<label for="task5">Write a short "letter" to each other and read them</label><br>
+
+<input type="checkbox" id="task6" name="task" value="task6">
+<label for="task6">Pick a book or short story to read together slowly</label><br>
+
+<input type="checkbox" id="task7" name="task" value="task7">
+<label for="task7">Plan our dream first in-person day in detail (but don’t do it all)</label><br>
+<input type="checkbox" id="task8" name="task" value="task8">
+<label for="task8">Design matching wallpapers or lock screens</label><br>
+
+<input type="checkbox" id="task9" name="task" value="task9">
+<label for="task9">Try cooking the same recipe and share photos</label><br>
+
+<input type="checkbox" id="task10" name="task" value="task10">
+<label for="task10">Build a "wishlist" of things we want to do together someday</label><br>
+
+<input type="checkbox" id="task11" name="task" value="task11">
+<label for="task11">Create emoji names in your phones for each other</label><br>
+<input type="checkbox" id="task12" name="task" value="task12">
+<label for="task12">Play 20 Questions over text or voice</label><br>
+
+<input type="checkbox" id="task13" name="task" value="task13">
+<label for="task13"></label>Do a "This or That" quiz and guess each other’s answers<br>
+
+<input type="checkbox" id="task14" name="task" value="task14">
+<label for="task14">Make a time capsule together to open when we meet</label><br>
+<input type="checkbox" id="task15" name="task" value="task15">
+<label for="task15">???</label><br>
+<hr>
+<footer>
+    <p>Made with ❤️ by Kimchi<a href="
+</footer>
+</body>
