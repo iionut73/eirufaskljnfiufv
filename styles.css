@@ -12,7 +12,6 @@ h1 {
     text-align: center;
 }
 body {
-    background-color:aliceblue
     font-family: Arial, sans-serif;
 }
 p {
@@ -48,4 +47,11 @@ label {
     text-align: center;
     font-size: 1rem;
     padding-top: -10px
+}
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ffb9e6;
+    margin-top: 20px;
+    font-family: Lucida cursive, cursive;
 }
